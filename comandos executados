@@ -1,0 +1,24 @@
+
+> show databases
+> use loja
+switched to db loja
+>
+> db.produtos.insert({ codigo: "01", descricao: "caneta" })
+WriteResult({ "nInserted" : 1 })
+>
+>db.produtos.find()
+{ "_id" : Object("6d17545854ef21a2a54abc72"), codigo: "01", descricao: "caneta" }
+>
+>
+>db.produtos.insert({ codigo: "02", descricao: "lapis", cor: "vermelha" })
+>
+>db.produtos.find()
+{ "_id" : Object("6d17545854ef21a2a54abc71"), codigo: "01", descricao: "caneta" }
+{ "_id" : Object("6d17545854ef21a2a54abc72"), codigo: "02", descricao: "lapis", cor: "vermelha" }
+>
+>db.produtos.insert({ codigo: "03", cor: "azul" })
+>
+>db.produtos.find()
+{ "_id" : Object("6d17545854ef21a2a54abc71"), codigo: "01", descricao: "caneta" }
+{ "_id" : Object("6d17545854ef21a2a54abc72"), codigo: "02", descricao: "lapis", cor: "vermelha" }
+{ "_id" : Object("6d17545854ef21a2a54abc73"), codigo: "03", cor: "azul" }
